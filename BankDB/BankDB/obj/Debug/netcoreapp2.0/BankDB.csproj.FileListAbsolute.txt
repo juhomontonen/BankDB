@@ -6,3 +6,6 @@ C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.csprojResolveAssembly
 C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.csproj.CoreCompileInputs.cache
 C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.AssemblyInfoInputs.cache
 C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.AssemblyInfo.cs
+C:\dev\BankDB\BankDB\BankDB\bin\Debug\netcoreapp2.0\BankDB.pdb
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.dll
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.pdb

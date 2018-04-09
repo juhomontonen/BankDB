@@ -13,11 +13,15 @@ namespace BankDB.Models
             Customer = new HashSet<Customer>();
         }
 
+        public Bank(string name, string bic)
+        {
+            Name = name;
+            Bic = bic;
+        }
+
         public long Id { get; set; }
-        [Required]
         [StringLength(50)]
         public string Name { get; set; }
-        [Required]
         [Column("BIC", TypeName = "nchar(10)")]
         public string Bic { get; set; }
 

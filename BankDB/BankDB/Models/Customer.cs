@@ -12,11 +12,15 @@ namespace BankDB.Models
             Account = new HashSet<Account>();
         }
 
+        public Customer(string firstName, string lastName)
+        {
+            Firstname = firstName;
+            Lastname = lastName;
+        }
+
         public long Id { get; set; }
-        [Required]
         [StringLength(50)]
         public string Firstname { get; set; }
-        [Required]
         [StringLength(50)]
         public string Lastname { get; set; }
         public long BankId { get; set; }

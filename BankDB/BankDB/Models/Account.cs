@@ -12,6 +12,12 @@ namespace BankDB.Models
             Transaction = new HashSet<Transaction>();
         }
 
+        public Account(string name, decimal balance)
+        {
+            Name = name;
+            Balance = balance;
+        }
+
         [Key]
         [Column("IBAN", TypeName = "nchar(20)")]
         public string Iban { get; set; }
