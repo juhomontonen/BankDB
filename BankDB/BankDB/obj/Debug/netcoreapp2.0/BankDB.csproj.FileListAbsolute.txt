@@ -1,0 +1,8 @@
+C:\dev\BankDB\BankDB\BankDB\bin\Debug\netcoreapp2.0\BankDB.deps.json
+C:\dev\BankDB\BankDB\BankDB\bin\Debug\netcoreapp2.0\BankDB.runtimeconfig.json
+C:\dev\BankDB\BankDB\BankDB\bin\Debug\netcoreapp2.0\BankDB.runtimeconfig.dev.json
+C:\dev\BankDB\BankDB\BankDB\bin\Debug\netcoreapp2.0\BankDB.dll
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.csprojResolveAssemblyReference.cache
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.csproj.CoreCompileInputs.cache
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.AssemblyInfoInputs.cache
+C:\dev\BankDB\BankDB\BankDB\obj\Debug\netcoreapp2.0\BankDB.AssemblyInfo.cs
