@@ -7,11 +7,11 @@ namespace BankDB.Models
 {
     public partial class Transaction
     {
-        public Transaction(decimal amount, DateTime timeStamp)
-        {
-            Amount = amount;
-            TimeStamp = timeStamp;
-        }
+        //public Transaction(decimal amount, DateTime timeStamp)
+        //{
+        //    Amount = amount;
+        //    TimeStamp = timeStamp;
+        //}
 
         public long Id { get; set; }
         [Column("IBAN", TypeName = "nchar(20)")]

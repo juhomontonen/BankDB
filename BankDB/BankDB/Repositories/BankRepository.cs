@@ -10,7 +10,44 @@ namespace BankDB.Repositories
 {
     class BankRepository : IBank
     {
-        private BankdbContext _context = new BankdbContext();
+        public List<Bank> GetBanks()
+        {
+            using (var context = new BankdbContext())
+            {
+                try
+                {
+                    List<Bank> banks = context.Bank.ToListAsync().Result;
+                    return banks;
+                }
+                catch (Exception ex)
+                {
+                    throw new NotImplementedException($"{ex.Message}\n{ex.InnerException.Message} \n");
+                }
+            }
+        }
+        public List<Bank> GetBankCustomers()
+        {
+            using (var context = new BankdbContext())
+            {
+                try
+                {
+                    List<Bank> banks = context.Bank
+                        .Include(b => b.Customer)
+                        .ToListAsync().Result;
+                    return banks;
+                }
+                catch (Exception ex)
+                {
+                    throw new NotImplementedException($"{ex.Message}\n{ex.InnerException.Message} \n");
+                }
+            }
+        }
+        public List<Bank> GetBankAccounts()
+        {
+            throw new NotImplementedException();
+        }
+
+        private readonly BankdbContext _context = new BankdbContext();
 
         public void Create(Bank bank)
         {
@@ -18,19 +55,28 @@ namespace BankDB.Repositories
             _context.SaveChanges();
         }
 
-        //public void Create(Bank bank)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        public void Delete(int Id)
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var delBank = _context.Bank.FirstOrDefault(p => p.Id == id);
+            if (delBank != null)
+                _context.Bank.Remove(delBank);
+            _context.SaveChanges();
+        }
+        public Bank GetBankById(long id)
+        {
+            var bank = _context.Bank.FirstOrDefault(p => p.Id == id);
+            return bank;
         }
 
         public void Update(Bank bank)
         {
-            throw new NotImplementedException();
+            var updateBank = GetBankById(bank.Id);
+            if (updateBank != null)
+            {
+                updateBank.Name = bank.Name;
+                _context.Bank.Update(updateBank);
+            }
+            _context.SaveChanges();
         }
     }
 }
