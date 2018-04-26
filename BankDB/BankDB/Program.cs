@@ -37,7 +37,7 @@ namespace BankDB
             {
                 Iban = "FI123333123333333332", 
                 Amount = 300,
-                TimeStamp = DateTime.Today,
+                TimeStamp = DateTime.Today
             };
             accountRepository.AddTransaction(transaction);
 
